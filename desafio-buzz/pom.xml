@@ -4,10 +4,32 @@
     <groupId>com.dextra</groupId>
     <artifactId>desafio-dextragiarios</artifactId>
     <version>0.0.0</version>
-    <name>Desafio para a formacao dos Dextragiarios 2014.</name>
+    <name>Desafio de capacitacao dos Dextragiarios 2014.</name>
     <inceptionYear>2013</inceptionYear>
-
+    <prerequisites>
+        <maven>3</maven>
+    </prerequisites>
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
+    <dependencies>
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>4.8.2</version>
+        </dependency>
+    </dependencies>
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <configuration>
+                    <includes>
+                        <include>**/*Test.java</include>
+                    </includes>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
 </project>
