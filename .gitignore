@@ -2,4 +2,5 @@ opt
 target
 gen
 .classpath
+.project
 *~
