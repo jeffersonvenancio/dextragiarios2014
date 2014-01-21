@@ -23,8 +23,6 @@ public class Cliente {
 	@OneToMany
 	private List<Conta> contas = new ArrayList<Conta>();
 
-	private Cliente() { }
-	
 	public Cliente(String nome) {
 		this.nome = nome;
 	}
