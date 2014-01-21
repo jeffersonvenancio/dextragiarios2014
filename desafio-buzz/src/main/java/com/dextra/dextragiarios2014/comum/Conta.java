@@ -1,4 +1,4 @@
-package com.dextra.dextragiarios2014.atividade4;
+package com.dextra.dextragiarios2014.comum;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -15,8 +15,6 @@ public class Conta {
 
 	@Column
 	private Double saldo;
-	
-	private Conta() { }
 	
 	public Conta(double saldo) {
 		this.saldo = saldo;

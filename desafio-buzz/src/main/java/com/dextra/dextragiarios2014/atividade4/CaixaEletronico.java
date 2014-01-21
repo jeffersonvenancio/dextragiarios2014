@@ -4,6 +4,10 @@ import java.util.List;
 
 import javax.persistence.EntityManager;
 
+import com.dextra.dextragiarios2014.comum.Cliente;
+import com.dextra.dextragiarios2014.comum.Conta;
+import com.dextra.dextragiarios2014.comum.JPAUtils;
+
 public class CaixaEletronico {
 
 	public static List<Conta> listaContasDeCliente(Long idCliente) {

@@ -1,4 +1,4 @@
-package com.dextra.dextragiarios2014.atividade4;
+package com.dextra.dextragiarios2014.comum;
 
 import java.util.ArrayList;
 import java.util.List;

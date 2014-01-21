@@ -1,4 +1,4 @@
-package com.dextra.dextragiarios2014.atividade4;
+package com.dextra.dextragiarios2014.comum;
 
 
 import javax.naming.NamingException;

@@ -2,20 +2,16 @@ package com.dextra.dextragiarios2014.test.atividade4;
 
 import java.util.List;
 
-import javax.persistence.EntityManager;
-import javax.persistence.EntityManagerFactory;
-import javax.persistence.Persistence;
-
 import junit.framework.Assert;
 
 import org.junit.BeforeClass;
 import org.junit.Test;
 
 import com.dextra.dextragiarios2014.atividade4.CaixaEletronico;
-import com.dextra.dextragiarios2014.atividade4.Cliente;
-import com.dextra.dextragiarios2014.atividade4.Conta;
-import com.dextra.dextragiarios2014.atividade4.JPAUtils;
-import com.dextra.dextragiarios2014.atividade4.JPA_DB_Utils;
+import com.dextra.dextragiarios2014.comum.Cliente;
+import com.dextra.dextragiarios2014.comum.Conta;
+import com.dextra.dextragiarios2014.comum.JPAUtils;
+import com.dextra.dextragiarios2014.comum.JPA_DB_Utils;
 
 public class Atividade4Test {
 
@@ -46,10 +42,6 @@ public class Atividade4Test {
 		Assert.assertEquals(2, contasDeCliente.size());
 	}
 	
-	//TODO - O cliente reclamou de clientes com contas novas de saldo negativo.  
-	
-	
-
 	private Cliente criaClienteTeste() {
 		return (Cliente) JPAUtils.merge(new Cliente("Jeffinho PehFofo"));
 	}
