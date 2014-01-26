@@ -11,42 +11,31 @@ public class Atividade7 {
 			return false;
 		}
 			
-		if (this.mes <= 7 && this.mes%2 == 1 && this.dia <= 31) {
-			return true;
-		}
-		else if (this.mes > 7 && this.mes%2 == 0 && this.dia <= 30) {
-			if (this.mes == 2 && this.dia <= 29 && this.ano%4 == 0) {
+		if (this.mes <= 7) {
+			if (this.mes%2 == 1 && this.dia <= 31) {
 				return true;
-			} else if (this.mes == 2 && this.dia <= 29 && this.ano%4 != 0) {
-				return false;
+			} else if (this.mes%2 == 0) {
+				if (this.mes == 2 && this.dia <= 29 && this.ano%4 == 0) {
+					return true;
+				} else if (this.mes == 2 && this.dia <= 29 && this.ano%4 != 0) {
+					return false;
+				} else {
+					return false;
+				}
 			} else {
 				return true;
+			}
+		}
+		else if (this.mes > 7) {
+			if (this.mes%2 == 0 && this.dia <= 31){
+				return true;
+			} else if (this.mes%2 == 1 && this.dia <= 30) {
+				return true;
+			} else {
+				return false;
 			}
 		} 
 		return false;
 	}
 	
-	public int getDia() {
-		return dia;
-	}
-	public void setDia(Integer dia) {
-		this.dia = dia;
-	}
-	public int getMes() {
-		return mes;
-	}
-	public void setMes(Integer mes) {
-		this.mes = mes;
-	}
-
-	public Integer getAno() {
-		return ano;
-	}
-
-	public void setAno(Integer ano) {
-		this.ano = ano;
-	}
-	
-	
-
 }
