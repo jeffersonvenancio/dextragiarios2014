@@ -1,4 +1,0 @@
-<openejb-jar xmlns="http://www.openejb.org/openejb-jar/1.1">
-  <pojo-deployment class-name="com.dextra.webapp.context.Application">
-  </pojo-deployment>
-</openejb-jar>

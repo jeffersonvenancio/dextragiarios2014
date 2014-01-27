@@ -6,10 +6,11 @@ import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
 
 @Path("")
-public class MainServlet {
+public class Hello {
 	
 	@GET
     @Produces(MediaType.TEXT_HTML)
+	@Path("hello")
 	public String hello() {
 		StringBuilder builder = new StringBuilder();
 		builder.append("<html>");
@@ -18,7 +19,7 @@ public class MainServlet {
 		builder.append("\t<link href=\"/style/style.css\" rel=\"stylesheet\" type=\"text/css\" />");
 		builder.append("</head>");
 		builder.append("<body>");
-		builder.append("\t<h1>Ola Mundo!!!</h1>");
+		builder.append("\t<h1>Ola Mundo???</h1>");
 		builder.append("</body>");
 		builder.append("</html>");
 		
