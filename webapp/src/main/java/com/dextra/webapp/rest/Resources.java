@@ -12,6 +12,7 @@ import javax.ws.rs.GET;
 import javax.ws.rs.Path;
 import javax.ws.rs.PathParam;
 import javax.ws.rs.core.Response;
+import javax.ws.rs.core.Response.ResponseBuilder;
 
 import com.dextra.webapp.context.ServerProperties;
 
@@ -26,13 +27,12 @@ public class Resources {
 		File f = (path == null || path.isEmpty()) ? index() : new File(basePath + "/" + path);
 		
 		if (f == null || !f.exists() || !f.isFile()) {
-			return Response.status(Response.Status.NOT_FOUND).build();
+			return this.send404();
 		}
 		
 		String mime = this.getContentType(f);
 		return Response.ok(f, mime).build();
 	}
-	
 	
 	/**
 	 * @return the first index file found on webapp root directory 
@@ -52,6 +52,12 @@ public class Resources {
 		}
 		
 		return null;
+	}
+	
+	private Response send404() {
+		File f = new File(basePath + "/404.html");
+		ResponseBuilder response = Response.status(Response.Status.NOT_FOUND);
+		return f.isFile() ? response.entity(f).build() : response.build();
 	}
 
 	private String getContentType(File f) {
