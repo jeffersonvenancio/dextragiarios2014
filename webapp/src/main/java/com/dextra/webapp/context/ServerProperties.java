@@ -15,7 +15,6 @@ public class ServerProperties {
 		try {
 			this.properties.load(this.getClass().getClassLoader().getResourceAsStream(NAME));
 		} catch (IOException e) {
-			e.printStackTrace();
 			throw new RuntimeException(e);
 		}
 	}
