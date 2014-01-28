@@ -10,7 +10,7 @@ import java.net.Socket;
 public class Server {
 	public static void main(String[] args) throws IOException {
 
-		int portNumber = 8080;
+		int portNumber = 4444;
 
 		try (ServerSocket serverSocket = new ServerSocket(portNumber);
 				Socket clientSocket = serverSocket.accept();
@@ -21,16 +21,13 @@ public class Server {
 
 			String inputLine, outputLine;
 
-			// Initiate conversation with client
-			KnockKnockProtocol kkp = new KnockKnockProtocol();
-			outputLine = kkp.processInput(null);
+			ProtocoloDeMensagens pMsg = new ProtocoloDeMensagens();
+			outputLine = pMsg.processaEntrada(null);
 			out.println(outputLine);
 
 			while ((inputLine = in.readLine()) != null) {
-				outputLine = kkp.processInput(inputLine);
+				outputLine = pMsg.processaEntrada(inputLine);
 				out.println(outputLine);
-				if (outputLine.equals("Bye."))
-					break;
 			}
 
 		} catch (IOException e) {
