@@ -1,5 +1,5 @@
-(function ($){
-	serviceTable = function(){
+(function ($, dg){
+	dg.serviceTable = function(){
 	
 		var values = [{
 			desc : 'Um'
@@ -27,4 +27,4 @@
 			find : find
 		}
 	};
-})(jQuery);
+})(jQuery, dextragiarios);
