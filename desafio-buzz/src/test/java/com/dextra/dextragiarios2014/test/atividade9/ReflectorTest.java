@@ -1,4 +1,4 @@
-package com.dextra.dextragiarios2014.test.atividade_13;
+package com.dextra.dextragiarios2014.test.atividade9;
 
 import java.lang.reflect.InvocationTargetException;
 import java.util.ArrayList;
@@ -7,7 +7,7 @@ import java.util.List;
 import org.junit.Assert;
 import org.junit.Test;
 
-import com.dextra.dextragiarios2014.atividade_13.Reflector;
+import com.dextra.dextragiarios2014.atividade9.Reflector;
 
 public class ReflectorTest {
 

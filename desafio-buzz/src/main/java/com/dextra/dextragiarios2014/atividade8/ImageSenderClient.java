@@ -1,4 +1,4 @@
-package com.dextra.dextragiarios2014.atividade_12;
+package com.dextra.dextragiarios2014.atividade8;
 
 import java.io.BufferedReader;
 import java.io.IOException;

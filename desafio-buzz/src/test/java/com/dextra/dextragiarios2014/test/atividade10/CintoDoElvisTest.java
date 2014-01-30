@@ -1,11 +1,11 @@
-package com.dextra.dextragiarios2014.test.atividade_14;
+package com.dextra.dextragiarios2014.test.atividade10;
 
 import java.util.Calendar;
 
 import org.junit.Assert;
 import org.junit.Test;
 
-import com.dextra.dextragiarios2014.atividade_14.CintoDoElvis;
+import com.dextra.dextragiarios2014.atividade10.CintoDoElvis;
 
 public class CintoDoElvisTest {
 

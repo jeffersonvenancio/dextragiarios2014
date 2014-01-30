@@ -1,4 +1,4 @@
-package com.dextra.dextragiarios2014.test.atividade_15;
+package com.dextra.dextragiarios2014.test.atividade11;
 
 import static org.junit.Assert.assertTrue;
 

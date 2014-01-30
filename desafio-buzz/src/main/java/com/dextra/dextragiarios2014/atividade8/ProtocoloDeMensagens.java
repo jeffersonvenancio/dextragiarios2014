@@ -1,4 +1,4 @@
-package com.dextra.dextragiarios2014.atividade_12;
+package com.dextra.dextragiarios2014.atividade8;
 
 public class ProtocoloDeMensagens {
 	private static final int WAITING = 0;
