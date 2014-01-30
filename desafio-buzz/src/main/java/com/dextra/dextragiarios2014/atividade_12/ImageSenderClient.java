@@ -14,11 +14,11 @@ public class ImageSenderClient {
 		String hostName = "localhost";
 		int portNumber = 4444;
 
-		try (Socket kkSocket = new Socket(hostName, portNumber);
-				PrintWriter out = new PrintWriter(kkSocket.getOutputStream(),
+		try (Socket socket = new Socket(hostName, portNumber);
+				PrintWriter out = new PrintWriter(socket.getOutputStream(),
 						true);
 				BufferedReader in = new BufferedReader(new InputStreamReader(
-						kkSocket.getInputStream()));) {
+						socket.getInputStream()));) {
 
 			BufferedReader stdIn = new BufferedReader(new InputStreamReader(
 					System.in));

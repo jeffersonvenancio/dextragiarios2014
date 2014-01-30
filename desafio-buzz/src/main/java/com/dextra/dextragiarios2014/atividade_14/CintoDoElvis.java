@@ -2,6 +2,12 @@ package com.dextra.dextragiarios2014.atividade_14;
 
 import java.util.Calendar;
 
+/**
+ * Dizem que o rei do Rock'n'Roll, após a fama, engordava um número do cinto a
+ * cada ano, e que este número coincidia com a sua idade. Ele nasceu em 1930.
+ * Este programa serve para saber qual seria o tamanho do cinto dele se ele
+ * estivesse vivo este ano.
+ */
 public class CintoDoElvis {
 	public static final CintoDoElvis INSTANCIA = new CintoDoElvis();
 	private final int tamanhoDoCinto;
@@ -14,9 +20,5 @@ public class CintoDoElvis {
 
 	public int getTamanhoDoCinto() {
 		return tamanhoDoCinto;
-	}
-
-	public static void main(String[] args) {
-		System.out.println("Elvis veste cinto tamanho " + INSTANCIA.getTamanhoDoCinto()+ ".");
 	}
 }
