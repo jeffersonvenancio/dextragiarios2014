@@ -28,6 +28,7 @@ Estamos tendo alguns problemas nas aplicações que foram desenvolvidas pela Dex
 
 9 - Dá erro interno ao abrir a página
 
+10 - Os testes começaram a quebrar e precisamos arrumar para continuar desenvolvendo nosso sistema.
 
 Vocês podem me ajuda por favor?
 
