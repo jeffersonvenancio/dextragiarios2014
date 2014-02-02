@@ -11,22 +11,24 @@ import com.dextra.webapp.entity.Usuario;
 
 @WebListener
 public class DatabaseLoader implements ServletContextListener {
+    
+    private static final boolean MOCK = "TRUE".equals(System.getProperty("mock"));
 
     @PersistenceContext
     private EntityManager em;
 
     @Override
     public void contextInitialized(ServletContextEvent sce) {
-        // TODO: ver se estah rodando o mock
+        if (MOCK) {
+            UserTransaction transaction = TransactionContainer.get();
+            try {
+                transaction.begin();
+                this.load();
+                transaction.commit();
 
-        UserTransaction transaction = TransactionContainer.get();
-        try {
-            transaction.begin();
-            this.load();
-            transaction.commit();
-
-        } catch (Exception e) {
-            throw new RuntimeException(e);
+            } catch (Exception e) {
+                throw new RuntimeException(e);
+            }
         }
     }
 

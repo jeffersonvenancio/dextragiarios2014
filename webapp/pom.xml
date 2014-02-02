@@ -130,6 +130,9 @@
         <configuration>
           <tomeeClassifier>jaxrs</tomeeClassifier>
           <warFile>target/ROOT</warFile>
+          <systemVariables>
+            <mock>TRUE</mock>
+          </systemVariables> 
         </configuration>
       </plugin>
     </plugins>
