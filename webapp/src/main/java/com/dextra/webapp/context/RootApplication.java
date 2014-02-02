@@ -11,13 +11,13 @@ import com.dextra.webapp.rest.Resources;
 @ApplicationPath("")
 public class RootApplication extends Application {
 
-	@Override
-	public Set<Class<?>> getClasses() {
-		Set<Class<?>> classes = new HashSet<>();
-		
-		classes.add(Resources.class);
-		
-		return classes;
-	}
+    @Override
+    public Set<Class<?>> getClasses() {
+        Set<Class<?>> classes = new HashSet<>();
+
+        classes.add(Resources.class);
+
+        return classes;
+    }
 
 }

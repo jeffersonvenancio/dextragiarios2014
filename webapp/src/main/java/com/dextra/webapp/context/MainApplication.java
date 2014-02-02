@@ -11,13 +11,16 @@ import com.dextra.webapp.rest.Hello;
 @ApplicationPath("api")
 public class MainApplication extends Application {
 
-	@Override
-	public Set<Class<?>> getClasses() {
-		Set<Class<?>> classes = new HashSet<>();
-		
-		classes.add(Hello.class);
-		
-		return classes;
-	}
+    @Override
+    public Set<Class<?>> getClasses() {
+        Set<Class<?>> classes = new HashSet<>();
+
+        classes.add(Hello.class);
+        classes.add(TransactionRequestHandler.class);
+        classes.add(TransactionResponseHandler.class);
+        classes.add(ThrowableMapper.class);
+
+        return classes;
+    }
 
 }

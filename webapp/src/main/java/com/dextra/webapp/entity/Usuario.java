@@ -8,20 +8,24 @@ import javax.persistence.Id;
 
 @Entity
 public class Usuario {
-	
-	@Id
-	@GeneratedValue(strategy = GenerationType.AUTO)
-	private Long id;
-	
-	@Column(length = 250)
-	private String nome;
 
-	public String getNome() {
-		return nome;
-	}
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private Long id;
 
-	public void setNome(String nome) {
-		this.nome = nome;
-	}
+    @Column(length = 250)
+    private String nome;
+
+    public Long getId() {
+        return this.id;
+    }
+
+    public String getNome() {
+        return nome;
+    }
+
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
 
 }
