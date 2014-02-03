@@ -5,6 +5,7 @@
     <persistence-unit name="hsqldb">
         <jta-data-source>WebappDS</jta-data-source>
         <class>com.dextra.webapp.entity.Usuario</class>
+        <class>com.dextra.webapp.entity.ChaveValor</class>
 
         <properties>
             <property name="openjpa.jdbc.SynchronizeMappings" value="buildSchema(ForeignKeys=true)"/>

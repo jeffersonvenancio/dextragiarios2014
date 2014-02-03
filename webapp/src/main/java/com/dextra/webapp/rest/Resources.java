@@ -2,6 +2,8 @@ package com.dextra.webapp.rest;
 
 import java.io.File;
 import java.io.IOException;
+import java.net.URI;
+import java.net.URISyntaxException;
 import java.nio.file.DirectoryStream;
 import java.nio.file.FileSystems;
 import java.nio.file.Files;
@@ -24,7 +26,12 @@ public class Resources {
     @GET
     @Path("{path:.*}")
     public Response doGet(@PathParam("path") String path) {
-        File f = (path == null || path.isEmpty()) ? index() : new File(basePath + "/" + path);
+        if (path == null || path.isEmpty()) {
+            URI location = this.index();
+            return (location == null) ? this.send404() : Response.seeOther(location).build();
+        }
+        
+        File f = new File(basePath + "/" + path);
 
         if (f == null || !f.exists() || !f.isFile()) {
             return this.send404();
@@ -35,19 +42,22 @@ public class Resources {
     }
 
     /**
-     * @return the first index file found on webapp root directory
+     * @return the name of the first index file found on webapp root directory
      */
-    private File index() {
+    private URI index() {
         java.nio.file.Path dir = FileSystems.getDefault().getPath(this.basePath);
         try (DirectoryStream<java.nio.file.Path> stream = Files.newDirectoryStream(dir, "index.*")) {
             Iterator<java.nio.file.Path> iterator = stream.iterator();
 
             if (iterator.hasNext()) {
                 java.nio.file.Path index = iterator.next();
-                return index.toFile();
+                String location = index.getFileName().toString();
+                return new URI(location);
             }
 
         } catch (IOException e) {
+            throw new RuntimeException(e);
+        } catch (URISyntaxException e) {
             throw new RuntimeException(e);
         }
 
