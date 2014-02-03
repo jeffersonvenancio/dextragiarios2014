@@ -8,7 +8,7 @@ Dextra = (function($, handle) {
 				var template = Handlebars.compile(source);
 
 				$.getJSON("/api/chave-valor/vo", {}, function(vo) {
-					$("#main-chave-valor").html(template(vo.value));
+					//$("#main-chave-valor").html(template(vo.value));
 				});  
 			} 
 			

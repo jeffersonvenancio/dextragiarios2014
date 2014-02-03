@@ -40,7 +40,8 @@ public class DatabaseLoader implements ServletContextListener {
     public void load() {
 
         Usuario usuario = new Usuario();
-        usuario.setNome("blablabla");
+        usuario.setNome("estag2014");
+        usuario.setSenha("estag2014");
         this.em.persist(usuario);
 
     }
