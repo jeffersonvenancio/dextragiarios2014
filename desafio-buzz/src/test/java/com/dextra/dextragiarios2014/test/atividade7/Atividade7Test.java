@@ -13,21 +13,21 @@ import com.dextra.dextragiarios2014.comum.Produto;
 
 public class Atividade7Test {
 	
-	//Refatorar e corrigir o metodo de verificação de datas, sem mexer no teste
+	//Refatorar e corrigir o metodo de verificacao de datas, sem mexer no teste
 	@Test
 	public void verificaData(){
 		Atividade7 calendario = new Atividade7();
 		Assert.assertTrue(calendario.verificaData(1l, 1l, 1l));
 	}
 	
-	//Refatorar e corrigir o metodo de comparação de strings, sem mexer no teste
+	//Refatorar e corrigir o metodo de comparacao de strings, sem mexer no teste
 	@Test
 	public void verificaString(){
 		Comparator comparator = new Comparator();
 		Assert.assertTrue(comparator.comparaStrings("Teste", "tesTe","tEste"));
 	}
 	
-	//Corrigir o metodo de recuperação de produtos, sem mexer no teste
+	//Corrigir o metodo de recuperacao de produtos, sem mexer no teste
 	@Test
 	public void testeProdutos() {
 		ProdutoServiceImpl service = new ProdutoServiceImpl();
