@@ -32,6 +32,38 @@ table {
 	cursor: default;
 }
 
-.hidden{
+.hidden {
 	display:none
+}
+
+
+/* TABLE LAYOUT */
+
+
+#tabela-valores table {
+    background: none repeat scroll 0 0 #FFFFFF;
+    border-collapse: collapse;
+    font-family: "Lucida Sans Unicode","Lucida Grande",Sans-Serif;
+    font-size: 12px;
+    margin: 20px;
+    text-align: left;
+    width: 480px;
+}
+
+#tabela-valores table th {
+    border-bottom: 2px solid #6678B1;
+    color: #003399;
+    font-size: 14px;
+    font-weight: normal;
+    padding: 10px 8px;
+}
+
+#tabela-valores table td {
+    border-bottom: 1px solid #CCCCCC;
+    color: #666699;
+    padding: 6px 8px;
+}
+
+#tabela-valores table tbody tr:hover td {
+    color: #000099;
 }

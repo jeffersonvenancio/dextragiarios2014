@@ -19,7 +19,29 @@
     <input type="text" id="chave" placeholder="chave">
     <input type="text" id="valor" placeholder="valor">
     <input type="button" id="submeter" value="submeter">
+    <br>
     <div id="tabela-valores"></div>
+  </script>
+  
+  <script id="template-tabela-chave-valor" type="text/x-handlebars-template">
+    <table>
+      <thead>
+        <tr>
+          <th>data</th>
+          <th>chave</th>
+          <th>valor</th>
+        </tr> 
+      </thead>
+      <tbody>
+      {{#each valores}}
+        <tr>
+          <td>{{dataHora}}</td>
+          <td>{{chave}}</td>
+          <td>{{valor}}</td>
+        </tr>
+      {{/each}}
+      </tbody>
+    </table>
   </script>
   <script>Dextra.ChaveValor.init();</script>
 </body>
