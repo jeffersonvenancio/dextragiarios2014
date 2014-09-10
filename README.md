@@ -32,5 +32,4 @@ Estamos tendo alguns problemas nas aplicações que foram desenvolvidas pela Dex
 
 Vocês podem me ajuda por favor?
 
-testé
 Cliente
